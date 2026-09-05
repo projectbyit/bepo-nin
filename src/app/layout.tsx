@@ -11,14 +11,22 @@ const goudy = Sorts_Mill_Goudy({
 });
 
 export const metadata: Metadata = {
-  title: "Bepo Restaurant Konoba Nin | The story continues in Nin",
+  title: "Bepo Restaurant Konoba Nin | Dalmatian Cuisine in Old Town Nin",
   description:
-    "Bepo Restaurant Konoba Nin — traditional Dalmatian cuisine in Old Town Nin. Opening hours, location, gallery, and reservations.",
+    "Bepo Restaurant Konoba Nin — traditional Dalmatian fish, seafood and local wine in Old Town Nin. Open daily 13:00–22:00. Reserve a table in the heart of historic Nin, Croatia.",
   metadataBase: new URL("https://beporestaurantnin.com"),
+  keywords: [
+    "Bepo Restaurant Nin",
+    "Konoba Bepo",
+    "restaurant Old Town Nin",
+    "Dalmatian cuisine Nin",
+    "seafood restaurant Nin Croatia",
+    "table reservation Nin",
+  ],
   openGraph: {
     title: "Bepo Restaurant Konoba Nin",
     description:
-      "The story continues in Nin. Fresh fish, local wine, and warm company in Old Town Nin.",
+      "The story continues in Nin. Fresh fish, local wine, and warm company in Old Town Nin. Open daily 13:00–22:00.",
     url: "https://beporestaurantnin.com",
     siteName: "Bepo Restaurant Konoba Nin",
     locale: "en_US",

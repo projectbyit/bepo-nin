@@ -29,4 +29,10 @@ export const homeSections = [
     file: "ContactSection.tsx",
     description: "Reservation CTA with Booking Table email button",
   },
+  {
+    key: "faq",
+    name: "FAQ",
+    file: "FaqSection.tsx",
+    description: "Five SEO FAQ items with accordion answers",
+  },
 ] as const;
