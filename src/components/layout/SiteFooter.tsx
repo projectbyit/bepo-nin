@@ -62,6 +62,9 @@ export function SiteFooter() {
             >
               {site.partner.label}
             </a>
+            <p className="max-w-xs font-serif text-sm leading-relaxed text-surface/65 md:text-base">
+              {site.partner.description}
+            </p>
           </div>
         </div>
 

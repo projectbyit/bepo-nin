@@ -1,8 +1,8 @@
 "use client";
 
-// SECTION: Gallery — photo gallery with lightbox zoom
+// SECTION: Gallery — photo gallery with soft lightbox zoom
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Container } from "@/components/shared/Container";
 
 const P =
@@ -10,7 +10,7 @@ const P =
 
 const images = [
   {
-    src: `${P}_terrace_outdoor_dining_ambiance.png`,
+    src: `${P}_terrace_outdoor_dining_ambiance.jpg`,
     alt: "Outdoor terrace dining at Restaurant Konoba Bepo Nin",
   },
   {
@@ -46,32 +46,79 @@ const images = [
     alt: "Wooden Bepo restaurant sign at the entrance in Nin",
   },
   {
-    src: `${P}_dining_table_setting.png`,
+    src: `${P}_dining_table_setting.jpg`,
     alt: "Table setting at Restaurant Konoba Bepo Nin",
   },
   {
-    src: `${P}_evening_old_town_lights.png`,
+    src: `${P}_evening_old_town_lights.jpg`,
     alt: "Evening lights in Old Town Nin near Bepo",
   },
   {
-    src: `${P}_restaurant_ambiance_interior.png`,
+    src: `${P}_restaurant_ambiance_interior.jpg`,
     alt: "Warm dining ambiance at Bepo Restaurant Konoba Nin",
   },
 ] as const;
 
+const SLIDE_MS = 360;
+
 export function GallerySection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [displayIndex, setDisplayIndex] = useState(0);
+  const [motion, setMotion] = useState({
+    opacity: 1,
+    x: 0,
+    animate: true,
+  });
+  const locking = useRef(false);
 
-  const close = useCallback(() => setActiveIndex(null), []);
-
-  const showPrev = useCallback(() => {
-    setActiveIndex((i) =>
-      i === null ? null : (i - 1 + images.length) % images.length,
-    );
+  const close = useCallback(() => {
+    setActiveIndex(null);
+    locking.current = false;
+    setMotion({ opacity: 1, x: 0, animate: true });
   }, []);
 
+  const goTo = useCallback(
+    (nextIndex: number, dir: 1 | -1) => {
+      if (locking.current || activeIndex === null) return;
+      locking.current = true;
+
+      // Soft exit
+      setMotion({ opacity: 0, x: dir * -28, animate: true });
+
+      window.setTimeout(() => {
+        setDisplayIndex(nextIndex);
+        setActiveIndex(nextIndex);
+        // Place incoming slide without animating
+        setMotion({ opacity: 0, x: dir * 28, animate: false });
+
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            setMotion({ opacity: 1, x: 0, animate: true });
+            window.setTimeout(() => {
+              locking.current = false;
+            }, SLIDE_MS);
+          });
+        });
+      }, SLIDE_MS);
+    },
+    [activeIndex],
+  );
+
+  const showPrev = useCallback(() => {
+    if (activeIndex === null) return;
+    goTo((activeIndex - 1 + images.length) % images.length, -1);
+  }, [activeIndex, goTo]);
+
   const showNext = useCallback(() => {
-    setActiveIndex((i) => (i === null ? null : (i + 1) % images.length));
+    if (activeIndex === null) return;
+    goTo((activeIndex + 1) % images.length, 1);
+  }, [activeIndex, goTo]);
+
+  const openAt = useCallback((index: number) => {
+    setDisplayIndex(index);
+    setActiveIndex(index);
+    setMotion({ opacity: 1, x: 0, animate: true });
+    locking.current = false;
   }, []);
 
   useEffect(() => {
@@ -93,7 +140,7 @@ export function GallerySection() {
     };
   }, [activeIndex, close, showPrev, showNext]);
 
-  const active = activeIndex !== null ? images[activeIndex] : null;
+  const active = activeIndex !== null ? images[displayIndex] : null;
 
   return (
     <section id="gallery" className="w-full bg-background-soft py-16 md:py-24 lg:py-32">
@@ -115,7 +162,7 @@ export function GallerySection() {
             <button
               key={image.src}
               type="button"
-              onClick={() => setActiveIndex(index)}
+              onClick={() => openAt(index)}
               className="group relative aspect-[3/4] overflow-hidden rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
               aria-label={`Open photo: ${image.alt}`}
             >
@@ -134,16 +181,18 @@ export function GallerySection() {
 
       {active && activeIndex !== null ? (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-ink/90 p-4 md:p-8"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-ink/92 p-4 md:p-10"
           role="dialog"
           aria-modal="true"
           aria-label="Photo lightbox"
-          onClick={close}
+          onClick={(e) => {
+            if (e.target === e.currentTarget) close();
+          }}
         >
           <button
             type="button"
             onClick={close}
-            className="absolute top-4 right-4 z-10 flex h-11 w-11 items-center justify-center rounded-md bg-surface/10 font-serif text-2xl text-surface transition-colors hover:bg-surface/20 md:top-6 md:right-6"
+            className="absolute top-4 right-4 z-10 flex h-11 w-11 items-center justify-center rounded-md bg-surface/10 font-serif text-2xl text-surface transition-colors duration-300 ease-out hover:bg-surface/20 md:top-6 md:right-6"
             aria-label="Close"
           >
             ×
@@ -155,7 +204,7 @@ export function GallerySection() {
               e.stopPropagation();
               showPrev();
             }}
-            className="absolute left-2 z-10 flex h-11 w-11 items-center justify-center rounded-md bg-surface/10 font-serif text-2xl text-surface transition-colors hover:bg-surface/20 md:left-6"
+            className="absolute left-2 z-10 flex h-11 w-11 items-center justify-center rounded-md bg-surface/10 font-serif text-2xl text-surface transition-colors duration-300 ease-out hover:bg-surface/20 md:left-6"
             aria-label="Previous photo"
           >
             ‹
@@ -167,22 +216,29 @@ export function GallerySection() {
               e.stopPropagation();
               showNext();
             }}
-            className="absolute right-2 z-10 flex h-11 w-11 items-center justify-center rounded-md bg-surface/10 font-serif text-2xl text-surface transition-colors hover:bg-surface/20 md:right-16"
+            className="absolute right-2 z-10 flex h-11 w-11 items-center justify-center rounded-md bg-surface/10 font-serif text-2xl text-surface transition-colors duration-300 ease-out hover:bg-surface/20 md:right-6"
             aria-label="Next photo"
           >
             ›
           </button>
 
           <div
-            className="relative h-[min(85vh,900px)] w-full max-w-5xl"
+            className="relative h-[min(82vh,860px)] w-full max-w-4xl"
             onClick={(e) => e.stopPropagation()}
+            style={{
+              opacity: motion.opacity,
+              transform: `translateX(${motion.x}px)`,
+              transition: motion.animate
+                ? `opacity ${SLIDE_MS}ms ease-out, transform ${SLIDE_MS}ms ease-out`
+                : "none",
+            }}
           >
             <Image
               src={active.src}
               alt={active.alt}
               fill
               className="object-contain"
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, 900px"
               priority
             />
           </div>

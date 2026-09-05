@@ -19,8 +19,10 @@ export const site = {
     href: "https://projectby.it",
   },
   partner: {
-    label: "porat-zadar.com",
-    href: "https://porat-zadar.com",
+    label: "poratzadar.com",
+    href: "https://poratzadar.com",
+    description:
+      "Porat Pizza & Bar na Branimirovoj obali u Zadru - radi cijelu godinu",
   },
 } as const;
 

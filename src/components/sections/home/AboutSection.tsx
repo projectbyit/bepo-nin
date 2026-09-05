@@ -27,7 +27,7 @@ export function AboutSection() {
 
         <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
           <Image
-            src="/gallery/restaurant_konoba_bepo_nin_old_town_table_booking_reservation_restaurant_ambiance_interior.png"
+            src="/gallery/restaurant_konoba_bepo_nin_old_town_table_booking_reservation_restaurant_ambiance_interior.jpg"
             alt="Atmosphere at Bepo Restaurant Konoba Nin"
             fill
             className="object-cover transition-transform duration-500 ease-out hover:scale-[1.03]"
