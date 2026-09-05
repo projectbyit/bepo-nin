@@ -13,7 +13,7 @@ export function AboutSection() {
             About
           </p>
           <h2 className="font-display text-4xl uppercase leading-tight tracking-[0.06em] text-ink md:text-5xl">
-            Good food, good shade, good company.
+            Welcome to the heart of Old Town Nin.
           </h2>
           <p className="font-serif text-lg leading-relaxed text-ink-muted md:text-xl">
             {site.description}
