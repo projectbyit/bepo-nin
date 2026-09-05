@@ -70,7 +70,7 @@ export function SiteFooter() {
 
         <div className="border-t border-surface/15 pt-8">
           <p className="font-serif text-base text-surface/75 md:text-lg">
-            &copy; 2026 All rights reserved. Created by{" "}
+            &copy; 2026 Restaurant Bepo. All rights reserved. Created by{" "}
             <a
               href={site.createdBy.href}
               target="_blank"
