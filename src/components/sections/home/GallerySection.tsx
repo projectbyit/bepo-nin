@@ -181,14 +181,19 @@ export function GallerySection() {
 
       {active && activeIndex !== null ? (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-ink/92 p-4 md:p-10"
+          className="fixed inset-0 z-[100]"
           role="dialog"
           aria-modal="true"
           aria-label="Photo lightbox"
-          onClick={(e) => {
-            if (e.target === e.currentTarget) close();
-          }}
         >
+          {/* Dedicated backdrop — tap/click anywhere on dark area closes (mobile + desktop) */}
+          <button
+            type="button"
+            className="absolute inset-0 bg-ink/92"
+            aria-label="Close gallery"
+            onClick={close}
+          />
+
           <button
             type="button"
             onClick={close}
@@ -200,11 +205,8 @@ export function GallerySection() {
 
           <button
             type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              showPrev();
-            }}
-            className="absolute left-2 z-10 flex h-11 w-11 items-center justify-center rounded-md bg-surface/10 font-serif text-2xl text-surface transition-colors duration-300 ease-out hover:bg-surface/20 md:left-6"
+            onClick={showPrev}
+            className="absolute top-1/2 left-2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-md bg-surface/10 font-serif text-2xl text-surface transition-colors duration-300 ease-out hover:bg-surface/20 md:left-6"
             aria-label="Previous photo"
           >
             ‹
@@ -212,35 +214,33 @@ export function GallerySection() {
 
           <button
             type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              showNext();
-            }}
-            className="absolute right-2 z-10 flex h-11 w-11 items-center justify-center rounded-md bg-surface/10 font-serif text-2xl text-surface transition-colors duration-300 ease-out hover:bg-surface/20 md:right-6"
+            onClick={showNext}
+            className="absolute top-1/2 right-2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-md bg-surface/10 font-serif text-2xl text-surface transition-colors duration-300 ease-out hover:bg-surface/20 md:right-6"
             aria-label="Next photo"
           >
             ›
           </button>
 
-          <div
-            className="relative h-[min(82vh,860px)] w-full max-w-4xl"
-            onClick={(e) => e.stopPropagation()}
-            style={{
-              opacity: motion.opacity,
-              transform: `translateX(${motion.x}px)`,
-              transition: motion.animate
-                ? `opacity ${SLIDE_MS}ms ease-out, transform ${SLIDE_MS}ms ease-out`
-                : "none",
-            }}
-          >
-            <Image
-              src={active.src}
-              alt={active.alt}
-              fill
-              className="object-contain"
-              sizes="(max-width: 768px) 100vw, 900px"
-              priority
-            />
+          <div className="pointer-events-none relative flex h-full items-center justify-center p-4 md:p-10">
+            <div
+              className="pointer-events-auto relative aspect-[3/4] w-full max-w-[min(100%,22rem)] md:max-h-[82vh] md:max-w-xl lg:max-w-2xl"
+              style={{
+                opacity: motion.opacity,
+                transform: `translateX(${motion.x}px)`,
+                transition: motion.animate
+                  ? `opacity ${SLIDE_MS}ms ease-out, transform ${SLIDE_MS}ms ease-out`
+                  : "none",
+              }}
+            >
+              <Image
+                src={active.src}
+                alt={active.alt}
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 90vw, 900px"
+                priority
+              />
+            </div>
           </div>
         </div>
       ) : null}
