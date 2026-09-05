@@ -19,7 +19,7 @@ export const homeSections = [
   },
   {
     key: "info",
-    name: "Info & Map",
+    name: "Info / Contact",
     file: "InfoSection.tsx",
     description: "Hours, address, map, and social links",
   },
@@ -27,6 +27,6 @@ export const homeSections = [
     key: "contact",
     name: "Contact",
     file: "ContactSection.tsx",
-    description: "Contact / reservation form",
+    description: "Reservation CTA with Booking Table email button",
   },
 ] as const;

@@ -9,7 +9,7 @@ export function InfoSection() {
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-4">
             <p className="font-serif text-sm tracking-[0.18em] uppercase text-gold">
-              Visit
+              Info / Contact
             </p>
             <h2 className="font-display text-4xl uppercase leading-tight tracking-[0.06em] text-ink md:text-5xl">
               Find us at the end of the Roman bridge.

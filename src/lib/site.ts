@@ -7,7 +7,7 @@ export const site = {
   address: "Ul. Hrvatskog Sabora 1, 23233 Nin, Croatia",
   mapsUrl: "https://maps.app.goo.gl/We9fGqkHwMfigMvZ6",
   mapsEmbed:
-    "https://www.google.com/maps?q=Ul.+Hrvatskog+Sabora+1,+23233+Nin,+Croatia&output=embed",
+    "https://www.google.com/maps?q=Bepo+Restaurant+Konoba+Nin,+Ul.+Hrvatskog+Sabora+1,+23233+Nin,+Croatia&z=18&hl=en&output=embed",
   phone: "+385 99 873 4483",
   phoneHref: "tel:+385998734483",
   email: "info@beporestaurantnin.com",
@@ -27,6 +27,6 @@ export const site = {
 export const navLinks = [
   { href: "#about", label: "About" },
   { href: "#gallery", label: "Gallery" },
-  { href: "#info", label: "Visit" },
+  { href: "#info", label: "Info" },
   { href: "#contact", label: "Contact" },
 ] as const;
