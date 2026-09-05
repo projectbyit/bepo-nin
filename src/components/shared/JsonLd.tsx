@@ -33,7 +33,10 @@ export function JsonLd({ locale, dict }: Props) {
     url: pageUrl,
     telephone: site.phone,
     email: site.email,
-    image: "https://beporestaurantnin.com/logo-bepo.png",
+    image: [
+      "https://beporestaurantnin.com/og-cover.jpg",
+      "https://beporestaurantnin.com/logo-bepo.png",
+    ],
     servesCuisine: ["Dalmatian", "Croatian", "Mediterranean", "Seafood"],
     priceRange: "$$",
     inLanguage: locale,

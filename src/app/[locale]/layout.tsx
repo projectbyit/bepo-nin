@@ -63,9 +63,28 @@ export async function generateMetadata({
         .filter((item) => item !== locale)
         .map((item) => localeOpenGraph[item]),
       type: "website",
+      images: [
+        {
+          url: "/og-cover.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Bepo Restaurant Konoba Nin",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Bepo Restaurant Konoba Nin",
+      description: dict.meta.ogDescription,
+      images: ["/og-cover.jpg"],
     },
     icons: {
-      icon: "/logo.svg",
+      icon: [
+        { url: "/favicon.ico", sizes: "any" },
+        { url: "/favicon.png", type: "image/png", sizes: "512x512" },
+        { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+      ],
+      apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
     },
   };
 }
