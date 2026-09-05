@@ -22,7 +22,7 @@ export const site = {
     label: "poratzadar.com",
     href: "https://poratzadar.com",
     description:
-      "Porat Pizza & Bar na Branimirovoj obali u Zadru - radi cijelu godinu",
+      "Porat Pizza & Bar on Branimirova Obala in Zadar — open all year round",
   },
 } as const;
 
