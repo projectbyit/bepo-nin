@@ -1,15 +1,36 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { Container } from "@/components/shared/Container";
 import { navLinks, site } from "@/lib/site";
 
 export function SiteHeader() {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  useEffect(() => {
+    function onKey(event: KeyboardEvent) {
+      if (event.key === "Escape") setOpen(false);
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-md">
-      <Container className="flex items-center justify-between gap-4 py-3 md:py-4">
+      <Container className="relative flex items-center justify-between gap-4 py-3 md:py-4">
         <Link
           href="#top"
-          className="group inline-flex shrink-0 items-center transition-opacity duration-200 ease-out hover:opacity-80"
+          onClick={() => setOpen(false)}
+          className="group relative z-[60] inline-flex shrink-0 items-center transition-opacity duration-200 ease-out hover:opacity-80"
         >
           <Image
             src="/logo-bepo.png"
@@ -21,7 +42,7 @@ export function SiteHeader() {
           />
         </Link>
 
-        <nav aria-label="Primary" className="flex items-center gap-1 sm:gap-2">
+        <nav aria-label="Primary" className="hidden items-center gap-1 md:flex md:gap-2">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -32,7 +53,53 @@ export function SiteHeader() {
             </a>
           ))}
         </nav>
+
+        <button
+          type="button"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
+          onClick={() => setOpen((value) => !value)}
+          className="relative z-[60] flex h-11 w-11 items-center justify-center rounded-sm md:hidden"
+        >
+          <span className="relative block h-3 w-7" aria-hidden>
+            <span
+              className={`absolute left-0 top-0 block h-px w-full bg-ink transition-transform duration-200 ease-out ${
+                open ? "translate-y-[5.5px] rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`absolute bottom-0 left-0 block h-px w-full bg-ink transition-transform duration-200 ease-out ${
+                open ? "-translate-y-[5.5px] -rotate-45" : ""
+              }`}
+            />
+          </span>
+        </button>
       </Container>
+
+      <div
+        id="mobile-menu"
+        hidden={!open}
+        className={`fixed inset-0 z-50 bg-background md:hidden ${
+          open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+        } transition-opacity duration-200 ease-out`}
+      >
+        <nav
+          aria-label="Mobile"
+          className="flex h-full flex-col items-center justify-center gap-8 px-6"
+        >
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className="font-display text-center text-3xl uppercase tracking-[0.14em] text-ink transition-colors duration-200 ease-out hover:text-gold sm:text-4xl"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+      </div>
     </header>
   );
 }
