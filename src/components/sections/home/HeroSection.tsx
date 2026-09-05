@@ -21,14 +21,8 @@ export function HeroSection() {
 
       <Container className="relative flex min-h-[88vh] flex-col justify-end py-16 md:min-h-[92vh] md:py-24 lg:py-32">
         <div className="flex max-w-2xl flex-col gap-6 text-surface">
-          <p className="font-serif text-sm tracking-[0.18em] uppercase text-surface md:text-base">
+          <h1 className="font-display text-4xl uppercase leading-[1.1] tracking-[0.06em] text-surface md:text-5xl lg:text-6xl">
             Restaurant Konoba BEPO Nin
-          </p>
-          <p className="font-serif text-sm tracking-[0.22em] uppercase text-gold">
-            Restaurant // Konoba
-          </p>
-          <h1 className="font-display text-5xl uppercase leading-[1.05] tracking-[0.08em] text-surface md:text-6xl lg:text-7xl">
-            Bepo
           </h1>
           <p className="font-display text-2xl uppercase leading-tight tracking-[0.06em] text-gold md:text-3xl lg:text-4xl">
             {site.slogan}
