@@ -4,35 +4,70 @@ import { site } from "@/lib/site";
 export function SiteFooter() {
   return (
     <footer className="w-full border-t border-border bg-ink text-surface">
-      <Container className="flex flex-col gap-4 py-8 md:flex-row md:items-center md:justify-between md:py-10">
-        <p className="font-serif text-sm text-surface/80">
-          &copy; 2026 All rights reserved. Created by{" "}
-          <a
-            href={site.createdBy.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gold underline decoration-gold/40 transition-colors duration-200 ease-out hover:text-gold-hover hover:decoration-gold"
-          >
-            {site.createdBy.label}
-          </a>
-        </p>
-        <div className="flex gap-4 font-serif text-sm">
-          <a
-            href={site.facebook}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-surface/80 transition-colors duration-200 ease-out hover:text-gold"
-          >
-            Facebook
-          </a>
-          <a
-            href={site.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-surface/80 transition-colors duration-200 ease-out hover:text-gold"
-          >
-            Instagram
-          </a>
+      <Container className="flex flex-col gap-10 py-16 md:gap-12 md:py-20 lg:py-24">
+        <div className="grid gap-10 md:grid-cols-3 md:gap-8">
+          <div className="flex flex-col gap-3">
+            <p className="font-serif text-xs tracking-[0.18em] uppercase text-gold">
+              Bepo
+            </p>
+            <p className="font-serif text-lg leading-relaxed text-surface/85 md:text-xl">
+              Restaurant // Konoba
+              <br />
+              Old Town Nin
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <p className="font-serif text-xs tracking-[0.18em] uppercase text-gold">
+              Follow
+            </p>
+            <div className="flex flex-col gap-2 font-serif text-base md:text-lg">
+              <a
+                href={site.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-surface/85 transition-colors duration-200 ease-out hover:text-gold"
+              >
+                Facebook
+              </a>
+              <a
+                href={site.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-surface/85 transition-colors duration-200 ease-out hover:text-gold"
+              >
+                Instagram
+              </a>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <p className="font-serif text-xs tracking-[0.18em] uppercase text-gold">
+              Partners
+            </p>
+            <a
+              href={site.partner.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-serif text-base text-surface/85 transition-colors duration-200 ease-out hover:text-gold md:text-lg"
+            >
+              {site.partner.label}
+            </a>
+          </div>
+        </div>
+
+        <div className="border-t border-surface/15 pt-8">
+          <p className="font-serif text-base text-surface/75 md:text-lg">
+            &copy; 2026 All rights reserved. Created by{" "}
+            <a
+              href={site.createdBy.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold underline decoration-gold/40 transition-colors duration-200 ease-out hover:text-gold-hover hover:decoration-gold"
+            >
+              {site.createdBy.label}
+            </a>
+          </p>
         </div>
       </Container>
     </footer>

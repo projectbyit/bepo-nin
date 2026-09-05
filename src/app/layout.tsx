@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
-import { Sorts_Mill_Goudy, WindSong } from "next/font/google";
+import { Sorts_Mill_Goudy } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
 const goudy = Sorts_Mill_Goudy({
   variable: "--font-goudy",
-  subsets: ["latin"],
-  weight: "400",
-  display: "swap",
-});
-
-const windsong = WindSong({
-  variable: "--font-windsong",
   subsets: ["latin"],
   weight: "400",
   display: "swap",
@@ -38,7 +31,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${goudy.variable} ${windsong.variable} h-full antialiased`}>
+    <html lang="en" className={`${goudy.variable} h-full antialiased`}>
       <body className="min-h-full bg-background font-serif text-ink">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-3359W3HNYJ"

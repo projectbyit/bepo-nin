@@ -18,6 +18,10 @@ export const site = {
     label: "projectby.it",
     href: "https://projectby.it",
   },
+  partner: {
+    label: "porat-zadar.com",
+    href: "https://porat-zadar.com",
+  },
 } as const;
 
 export const navLinks = [

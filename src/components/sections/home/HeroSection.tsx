@@ -16,7 +16,7 @@ export function HeroSection() {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/45 to-ink/70" />
-        <div className="pattern-2026 absolute inset-0 mix-blend-soft-light" aria-hidden />
+        <div className="pattern-bg absolute inset-0 mix-blend-soft-light" aria-hidden />
       </div>
 
       <Container className="relative flex min-h-[88vh] flex-col justify-end py-16 md:min-h-[92vh] md:py-24 lg:py-32">
@@ -32,10 +32,10 @@ export function HeroSection() {
           <p className="font-serif text-sm tracking-[0.22em] uppercase text-gold">
             Restaurant // Konoba
           </p>
-          <h1 className="font-display text-5xl leading-[1.05] text-surface md:text-6xl lg:text-7xl">
+          <h1 className="font-display text-5xl uppercase leading-[1.05] tracking-[0.08em] text-surface md:text-6xl lg:text-7xl">
             Bepo
           </h1>
-          <p className="font-display text-3xl leading-tight text-gold md:text-4xl lg:text-5xl">
+          <p className="font-display text-2xl uppercase leading-tight tracking-[0.06em] text-gold md:text-3xl lg:text-4xl">
             {site.slogan}
           </p>
           <p className="max-w-xl font-serif text-lg text-surface/90 md:text-xl">

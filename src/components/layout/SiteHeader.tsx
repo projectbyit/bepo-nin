@@ -5,7 +5,7 @@ import { navLinks, site } from "@/lib/site";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-md">
       <Container className="flex items-center justify-between gap-4 py-3 md:py-4">
         <Link
           href="#top"
@@ -16,10 +16,10 @@ export function SiteHeader() {
             alt={`${site.name} logo`}
             width={56}
             height={56}
-            className="h-12 w-12 object-contain md:h-14 md:w-14"
+            className="h-12 w-12 object-contain brightness-0 md:h-14 md:w-14"
             priority
           />
-          <span className="hidden font-serif text-sm tracking-[0.12em] uppercase text-ink sm:block">
+          <span className="hidden font-serif text-sm tracking-[0.18em] uppercase text-ink sm:block">
             Bepo
           </span>
         </Link>
@@ -29,7 +29,7 @@ export function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="rounded-sm px-2.5 py-2 font-serif text-sm text-ink-muted transition-colors duration-200 ease-out hover:text-ink focus-visible:text-ink md:px-3 md:text-base"
+              className="rounded-sm px-2.5 py-2 font-serif text-xs tracking-[0.16em] uppercase text-ink-muted transition-colors duration-200 ease-out hover:text-ink focus-visible:text-ink md:px-3 md:text-sm"
             >
               {link.label}
             </a>

@@ -11,7 +11,7 @@ export function InfoSection() {
             <p className="font-serif text-sm tracking-[0.18em] uppercase text-gold">
               Visit
             </p>
-            <h2 className="font-display text-4xl leading-tight text-ink md:text-5xl">
+            <h2 className="font-display text-4xl uppercase leading-tight tracking-[0.06em] text-ink md:text-5xl">
               Find us at the end of the Roman bridge.
             </h2>
           </div>
