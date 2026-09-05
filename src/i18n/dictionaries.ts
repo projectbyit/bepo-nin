@@ -83,19 +83,19 @@ const en: Dictionary = {
     title:
       "Bepo Restaurant Konoba Nin | Dalmatian Cuisine in Old Town Nin, Croatia",
     description:
-      "Bepo Restaurant Konoba Nin — traditional Dalmatian fish, seafood and local wine in Old Town Nin. Open in season daily 13:00–22:00. Closed in winter (November–March). Reserve a table, or enquire about celebrations, first communions and confirmations.",
+      "Bepo Restaurant Konoba Nin — Dalmatian starters, grill, meat, fish, pasta and desserts in Old Town Nin. Open in season daily 13:00–22:00. Closed in winter (November–March). Reserve a table, or enquire about celebrations, first communions and confirmations.",
     keywords: [
       "Bepo Restaurant Nin",
       "Konoba Bepo Nin",
       "restaurant Old Town Nin",
       "Dalmatian cuisine Nin",
-      "seafood restaurant Nin Croatia",
+      "grill restaurant Nin Croatia",
       "table reservation Nin",
       "celebration restaurant Nin",
       "first communion Nin restaurant",
     ],
     ogDescription:
-      "The story continues in Nin. Fresh fish, local wine, and warm company in Old Town Nin. Open in season 13:00–22:00. Closed November–March.",
+      "The story continues in Nin. Grill, meat, fish, pasta and warm company in Old Town Nin. Open in season 13:00–22:00. Closed November–March.",
   },
   nav: {
     about: "About",
@@ -110,7 +110,7 @@ const en: Dictionary = {
   hero: {
     title: "Restaurant Konoba BEPO Nin",
     slogan: "The story continues in Nin.",
-    lead: "Fresh fish, local wine, and warm company in the heart of Old Town Nin.",
+    lead: "Starters, grill, meat, fish, pasta and desserts — with local wine and warm company in Old Town Nin.",
     ctaReserve: "Reserve a table",
     ctaGallery: "View gallery",
     imageAlt: "Dining atmosphere at Bepo in Old Town Nin",
@@ -118,7 +118,7 @@ const en: Dictionary = {
   about: {
     label: "About",
     title: "Welcome to the heart of Old Town Nin.",
-    p1: "Welcome to Bepo restaurant and konoba in the heart of Old Town Nin, on the quiet shores of the Nin lagoon. Traditional Dalmatian cooking meets the warmth of a home table — fresh fish, seasonal vegetables, local wine, and olive oil that tastes of this place.",
+    p1: "Welcome to Bepo restaurant and konoba in the heart of Old Town Nin, on the quiet shores of the Nin lagoon. Traditional Dalmatian cooking meets the warmth of a home table — starters, grill, meat, fish, pasta and desserts, with local wine, olive oil from this region, and olives from our terrace.",
     p2: "Bepo is more than a meal — it is the experience of Nin: sea, salt, stone, and generations who lived from this land and water. Use the weekend for a stroll through town, then finish with a plate at our table.",
     imageAlt: "Atmosphere at Bepo Restaurant Konoba Nin",
   },
@@ -129,7 +129,7 @@ const en: Dictionary = {
   },
   info: {
     label: "Info / Contact",
-    title: "Find us at the end of the Roman bridge.",
+    title: "Find us by the Roman bridge.",
     hoursLabel: "Opening hours",
     hoursValue: "In season: every day 13:00 – 22:00 (April–October)",
     winterNote: "Closed in winter: November–March",
@@ -156,7 +156,7 @@ const en: Dictionary = {
       {
         question: "Where is Bepo Restaurant Konoba Nin located?",
         answer:
-          "Bepo Restaurant Konoba Nin is in the heart of Old Town Nin, Croatia, at Ul. Hrvatskog Sabora 1, 23233 Nin. You will find us near the historic centre and the Nin lagoon — a short walk from the Roman bridge and the old town streets.",
+          "Bepo Restaurant Konoba Nin is in the heart of Old Town Nin, Croatia, at Ul. Hrvatskog Sabora 1, 23233 Nin. You will find us near the historic centre and the Nin lagoon — by the Roman bridge and the old town streets.",
       },
       {
         question: "What are the opening hours? Are you open in winter?",
@@ -171,7 +171,7 @@ const en: Dictionary = {
       {
         question: "What kind of food does Bepo Restaurant Konoba serve?",
         answer:
-          "Bepo is a traditional Dalmatian restaurant and konoba. We serve fresh fish and seafood, seasonal vegetables, local olive oil, and Croatian wine — simple, honest cooking that tastes of Nin and the Adriatic coast.",
+          "Bepo is a traditional Dalmatian restaurant and konoba. We serve starters, grilled dishes, meat, fresh fish, pasta and desserts — with local olive oil, olives from our terrace, and Croatian wine. Simple, honest cooking that tastes of Nin and the Adriatic coast.",
       },
       {
         question:
@@ -202,19 +202,19 @@ const hr: Dictionary = {
     title:
       "Restoran Konoba Bepo Nin | Dalmatinska kuhinja u starom gradu Ninu",
     description:
-      "Restoran Konoba Bepo Nin — tradicionalna dalmatinska riba, plodovi mora i lokalna vina u starom gradu Ninu. U sezoni radimo svaki dan 13:00–22:00. Zimi ne radimo (studeni–ožujak). Rezervirajte stol ili se raspitajte za domjenke, pričesti i krizme.",
+      "Restoran Konoba Bepo Nin — dalmatinska predjela, grill, meso, riba, pašta i deserti u starom gradu Ninu. U sezoni radimo svaki dan 13:00–22:00. Zimi ne radimo (studeni–ožujak). Rezervirajte stol ili se raspitajte za domjenke, pričesti i krizme.",
     keywords: [
       "Restoran Bepo Nin",
       "Konoba Bepo Nin",
       "restoran stari grad Nin",
       "dalmatinska kuhinja Nin",
-      "riba restoran Nin",
+      "grill restoran Nin",
       "rezervacija stola Nin",
       "domjenak Nin restoran",
       "pričest krizma Nin",
     ],
     ogDescription:
-      "Priča se nastavlja u Ninu. Svježa riba, lokalno vino i toplina domaćeg stola u starom gradu Ninu. U sezoni 13:00–22:00. Zimi zatvoreno (studeni–ožujak).",
+      "Priča se nastavlja u Ninu. Grill, meso, riba, pašta i toplina domaćeg stola u starom gradu Ninu. U sezoni 13:00–22:00. Zimi zatvoreno (studeni–ožujak).",
   },
   nav: {
     about: "O nama",
@@ -229,7 +229,7 @@ const hr: Dictionary = {
   hero: {
     title: "Restoran Konoba BEPO Nin",
     slogan: "Priča se nastavlja u Ninu.",
-    lead: "Svježa riba, lokalno vino i toplina društva u srcu starog grada Nina.",
+    lead: "Predjela, grill, meso, riba, pašta i deserti — uz lokalno vino i toplinu društva u srcu starog grada Nina.",
     ctaReserve: "Rezervirajte stol",
     ctaGallery: "Pogledajte galeriju",
     imageAlt: "Ambijent blagovanja u restoranu Bepo u starom gradu Ninu",
@@ -237,8 +237,8 @@ const hr: Dictionary = {
   about: {
     label: "O nama",
     title: "Dobrodošli u srce starog grada Nina.",
-    p1: "Dobrodošli u restoran i konobu Bepo u srcu starog grada Nina, uz mirne obale Ninške lagune. Tradicionalna dalmatinska kuhinja susreće toplinu domaćeg stola — svježa riba, sezonsko povrće, lokalno vino i maslinovo ulje okusa ovog kraja.",
-    p2: "Bepo je više od obroka — to je doživljaj Nina: more, sol, kamen i naraštaji koji su živjeli od ovog kraja i mora. Iskoristite vikend za šetnju gradom, a zatim završite tanjurom za našim stolom.",
+    p1: "Dobrodošli u restoran i konobu Bepo u srcu starog grada Nina, uz mirne obale Ninske lagune. Tradicionalna dalmatinska kuhinja susreće toplinu domaćeg stola — predjela, grill, meso, riba, pašta i deserti, uz lokalno vino, maslinovo ulje ovog kraja i masline s naše terase.",
+    p2: "Bepo je više od obroka — doživljaj Nina: more, sol, kamen i naraštaji koji su živjeli od ovog kraja i mora. Iskoristite vikend za šetnju gradom, pa završite tanjurom za našim stolom.",
     imageAlt: "Ambijent restorana Konoba Bepo Nin",
   },
   gallery: {
@@ -248,7 +248,7 @@ const hr: Dictionary = {
   },
   info: {
     label: "Info / Kontakt",
-    title: "Nađite nas na kraju Rimskog mosta.",
+    title: "Nađite nas kod Rimskog mosta.",
     hoursLabel: "Radno vrijeme",
     hoursValue: "U sezoni: svaki dan 13:00 – 22:00 (travanj–listopad)",
     winterNote: "Zimi ne radimo: studeni–ožujak",
@@ -275,7 +275,7 @@ const hr: Dictionary = {
       {
         question: "Gdje se nalazi restoran Konoba Bepo Nin?",
         answer:
-          "Restoran Konoba Bepo Nin nalazi se u srcu starog grada Nina, Hrvatska, na adresi Ul. Hrvatskog sabora 1, 23233 Nin. Blizu ste povijesne jezgre i Ninške lagune — kratka šetnja od Rimskog mosta i starih ulica.",
+          "Restoran Konoba Bepo Nin nalazi se u srcu starog grada Nina, Hrvatska, na adresi Ul. Hrvatskog sabora 1, 23233 Nin. Blizu ste povijesne jezgre i Ninske lagune — kod Rimskog mosta i starih ulica.",
       },
       {
         question: "Koje je radno vrijeme? Radite li zimi?",
@@ -290,7 +290,7 @@ const hr: Dictionary = {
       {
         question: "Kakvu hranu nudi restoran Konoba Bepo?",
         answer:
-          "Bepo je tradicionalni dalmatinski restoran i konoba. Poslužujemo svježu ribu i plodove mora, sezonsko povrće, lokalno maslinovo ulje i hrvatska vina — jednostavnu, iskrenu kuhinju okusa Nina i Jadrana.",
+          "Bepo je tradicionalni dalmatinski restoran i konoba. Poslužujemo predjela, jela s grilla, meso, svježu ribu, pašte i deserte — uz lokalno maslinovo ulje, masline s naše terase i hrvatska vina. Jednostavna, iskrena kuhinja okusa Nina i Jadrana.",
       },
       {
         question: "Organizirate li domjenke, pričesti i krizme?",
@@ -320,19 +320,19 @@ const de: Dictionary = {
     title:
       "Restaurant Konoba Bepo Nin | Dalmatinische Küche in der Altstadt von Nin",
     description:
-      "Restaurant Konoba Bepo Nin — traditioneller dalmatinischer Fisch, Meeresfrüchte und lokale Weine in der Altstadt von Nin. In der Saison täglich 13:00–22:00 geöffnet. Im Winter geschlossen (November–März). Reservieren Sie einen Tisch oder fragen Sie nach Feiern, Erstkommunionen und Firmungen.",
+      "Restaurant Konoba Bepo Nin — dalmatinische Vorspeisen, Grill, Fleisch, Fisch, Pasta und Desserts in der Altstadt von Nin. In der Saison täglich 13:00–22:00 geöffnet. Im Winter geschlossen (November–März). Reservieren Sie einen Tisch oder fragen Sie nach Feiern, Erstkommunionen und Firmungen.",
     keywords: [
       "Restaurant Bepo Nin",
       "Konoba Bepo Nin",
       "Restaurant Altstadt Nin",
       "dalmatinische Küche Nin",
-      "Fischrestaurant Nin Kroatien",
+      "Grill Restaurant Nin Kroatien",
       "Tischreservierung Nin",
       "Feier Restaurant Nin",
       "Erstkommunion Firmung Nin",
     ],
     ogDescription:
-      "Die Geschichte geht in Nin weiter. Frischer Fisch, lokaler Wein und herzliche Gastfreundschaft in der Altstadt von Nin. In der Saison 13:00–22:00. Geschlossen November–März.",
+      "Die Geschichte geht in Nin weiter. Grill, Fleisch, Fisch, Pasta und herzliche Gastfreundschaft in der Altstadt von Nin. In der Saison 13:00–22:00. Geschlossen November–März.",
   },
   nav: {
     about: "Über uns",
@@ -347,7 +347,7 @@ const de: Dictionary = {
   hero: {
     title: "Restaurant Konoba BEPO Nin",
     slogan: "Die Geschichte geht in Nin weiter.",
-    lead: "Frischer Fisch, lokaler Wein und herzliche Gesellschaft im Herzen der Altstadt von Nin.",
+    lead: "Vorspeisen, Grill, Fleisch, Fisch, Pasta und Desserts — mit lokalem Wein und herzlicher Gesellschaft in der Altstadt von Nin.",
     ctaReserve: "Tisch reservieren",
     ctaGallery: "Galerie ansehen",
     imageAlt: "Essatmosphäre im Restaurant Bepo in der Altstadt von Nin",
@@ -355,8 +355,8 @@ const de: Dictionary = {
   about: {
     label: "Über uns",
     title: "Willkommen im Herzen der Altstadt von Nin.",
-    p1: "Willkommen im Restaurant und in der Konoba Bepo im Herzen der Altstadt von Nin, an den ruhigen Ufern der Lagune von Nin. Traditionelle dalmatinische Küche trifft auf die Wärme eines heimischen Tisches — frischer Fisch, saisonales Gemüse, lokaler Wein und Olivenöl mit dem Geschmack dieser Region.",
-    p2: "Bepo ist mehr als eine Mahlzeit — es ist das Erlebnis von Nin: Meer, Salz, Stein und Generationen, die von diesem Land und Wasser lebten. Nutzen Sie das Wochenende für einen Spaziergang durch die Stadt und beenden Sie den Tag an unserem Tisch.",
+    p1: "Willkommen im Restaurant und in der Konoba Bepo im Herzen der Altstadt von Nin, an den ruhigen Ufern der Lagune von Nin. Traditionelle dalmatinische Küche trifft auf die Wärme eines heimischen Tisches — Vorspeisen, Grillgerichte, Fleisch, Fisch, Pasta und Desserts, dazu lokaler Wein, Olivenöl aus dieser Region und Oliven von unserer Terrasse.",
+    p2: "Bepo ist mehr als eine Mahlzeit — das Erlebnis von Nin: Meer, Salz, Stein und Generationen, die von diesem Land und Wasser lebten. Nutzen Sie das Wochenende für einen Spaziergang durch die Stadt und beenden Sie den Tag an unserem Tisch.",
     imageAlt: "Ambiente im Restaurant Konoba Bepo Nin",
   },
   gallery: {
@@ -366,7 +366,7 @@ const de: Dictionary = {
   },
   info: {
     label: "Info / Kontakt",
-    title: "Finden Sie uns am Ende der Römerbrücke.",
+    title: "Finden Sie uns an der Römerbrücke.",
     hoursLabel: "Öffnungszeiten",
     hoursValue: "In der Saison: täglich 13:00 – 22:00 (April–Oktober)",
     winterNote: "Im Winter geschlossen: November–März",
@@ -393,7 +393,7 @@ const de: Dictionary = {
       {
         question: "Wo befindet sich das Restaurant Konoba Bepo Nin?",
         answer:
-          "Das Restaurant Konoba Bepo Nin liegt im Herzen der Altstadt von Nin, Kroatien, in der Ul. Hrvatskog Sabora 1, 23233 Nin. Sie finden uns nahe dem historischen Zentrum und der Lagune von Nin — nur wenige Schritte von der Römerbrücke und den Altstadtgassen entfernt.",
+          "Das Restaurant Konoba Bepo Nin liegt im Herzen der Altstadt von Nin, Kroatien, in der Ul. Hrvatskog Sabora 1, 23233 Nin. Sie finden uns nahe dem historischen Zentrum und der Lagune von Nin — an der Römerbrücke und den Altstadtgassen.",
       },
       {
         question: "Welche Öffnungszeiten gelten? Habt ihr im Winter geöffnet?",
@@ -408,7 +408,7 @@ const de: Dictionary = {
       {
         question: "Welche Küche bietet das Restaurant Konoba Bepo?",
         answer:
-          "Bepo ist ein traditionelles dalmatinisches Restaurant und eine Konoba. Wir servieren frischen Fisch und Meeresfrüchte, saisonales Gemüse, lokales Olivenöl und kroatische Weine — schlichte, ehrliche Küche mit dem Geschmack von Nin und der Adria.",
+          "Bepo ist ein traditionelles dalmatinisches Restaurant und eine Konoba. Wir servieren Vorspeisen, Grillgerichte, Fleisch, frischen Fisch, Pasta und Desserts — mit lokalem Olivenöl, Oliven von unserer Terrasse und kroatischen Weinen. Schlichte, ehrliche Küche mit dem Geschmack von Nin und der Adria.",
       },
       {
         question:
