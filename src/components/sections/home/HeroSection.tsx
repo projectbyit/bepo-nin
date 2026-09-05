@@ -21,14 +21,9 @@ export function HeroSection() {
 
       <Container className="relative flex min-h-[88vh] flex-col justify-end py-16 md:min-h-[92vh] md:py-24 lg:py-32">
         <div className="flex max-w-2xl flex-col gap-6 text-surface">
-          <Image
-            src="/logo.svg"
-            alt=""
-            width={120}
-            height={120}
-            className="h-20 w-20 object-contain brightness-0 invert md:h-24 md:w-24"
-            aria-hidden
-          />
+          <p className="font-serif text-sm tracking-[0.18em] uppercase text-surface md:text-base">
+            Restaurant Konoba BEPO Nin
+          </p>
           <p className="font-serif text-sm tracking-[0.22em] uppercase text-gold">
             Restaurant // Konoba
           </p>
