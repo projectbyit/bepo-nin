@@ -9,19 +9,16 @@ export function SiteHeader() {
       <Container className="flex items-center justify-between gap-4 py-3 md:py-4">
         <Link
           href="#top"
-          className="group flex items-center gap-3 transition-opacity duration-200 ease-out hover:opacity-80"
+          className="group inline-flex shrink-0 items-center transition-opacity duration-200 ease-out hover:opacity-80"
         >
           <Image
-            src="/logo.svg"
+            src="/logo-bepo.png"
             alt={`${site.name} logo`}
-            width={56}
-            height={56}
-            className="h-12 w-12 object-contain brightness-0 md:h-14 md:w-14"
+            width={773}
+            height={206}
+            className="h-10 w-auto object-contain md:h-12"
             priority
           />
-          <span className="hidden font-serif text-sm tracking-[0.18em] uppercase text-ink sm:block">
-            Bepo
-          </span>
         </Link>
 
         <nav aria-label="Primary" className="flex items-center gap-1 sm:gap-2">

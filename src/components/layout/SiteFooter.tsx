@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components/shared/Container";
 import { site } from "@/lib/site";
 
@@ -6,13 +8,20 @@ export function SiteFooter() {
     <footer className="w-full border-t border-border bg-ink text-surface">
       <Container className="flex flex-col gap-10 py-16 md:gap-12 md:py-20 lg:py-24">
         <div className="grid gap-10 md:grid-cols-3 md:gap-8">
-          <div className="flex flex-col gap-3">
-            <p className="font-serif text-xs tracking-[0.18em] uppercase text-gold">
-              Bepo
-            </p>
+          <div className="flex flex-col gap-4">
+            <Link
+              href="#top"
+              className="inline-flex w-fit transition-opacity duration-200 ease-out hover:opacity-80"
+            >
+              <Image
+                src="/logo-bepo.png"
+                alt={`${site.name} logo`}
+                width={773}
+                height={206}
+                className="h-12 w-auto object-contain brightness-0 invert md:h-14"
+              />
+            </Link>
             <p className="font-serif text-lg leading-relaxed text-surface/85 md:text-xl">
-              Restaurant // Konoba
-              <br />
               Old Town Nin
             </p>
           </div>
