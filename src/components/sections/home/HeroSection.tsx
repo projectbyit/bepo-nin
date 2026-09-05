@@ -8,7 +8,7 @@ export function HeroSection() {
     <section id="top" className="relative w-full overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/gallery/terrace.png"
+          src="/gallery/restaurant_konoba_bepo_nin_old_town_table_booking_reservation_terrace_outdoor_dining_ambiance.png"
           alt="Dining atmosphere at Bepo in Old Town Nin"
           fill
           priority
