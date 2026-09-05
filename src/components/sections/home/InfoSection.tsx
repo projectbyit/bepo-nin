@@ -1,31 +1,37 @@
 // SECTION: Info & Map — hours, address, map, and social links
 import { Container } from "@/components/shared/Container";
+import type { Dictionary } from "@/i18n/dictionaries";
 import { site } from "@/lib/site";
 
-export function InfoSection() {
+type Props = { dict: Dictionary };
+
+export function InfoSection({ dict }: Props) {
   return (
     <section id="info" className="w-full bg-background py-16 md:py-24 lg:py-32">
       <Container className="grid gap-10 lg:grid-cols-2 lg:gap-14">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-4">
             <p className="font-serif text-sm tracking-[0.18em] uppercase text-gold">
-              Info / Contact
+              {dict.info.label}
             </p>
             <h2 className="font-display text-4xl uppercase leading-tight tracking-[0.06em] text-ink md:text-5xl">
-              Find us at the end of the Roman bridge.
+              {dict.info.title}
             </h2>
           </div>
 
           <ul className="flex flex-col gap-5 font-serif text-lg text-ink-muted">
             <li>
               <span className="mb-1 block text-sm tracking-[0.12em] uppercase text-ink">
-                Opening hours
+                {dict.info.hoursLabel}
               </span>
-              {site.hours}
+              <span className="block">{dict.info.hoursValue}</span>
+              <span className="mt-1 block text-base text-ink/70">
+                {dict.info.winterNote}
+              </span>
             </li>
             <li>
               <span className="mb-1 block text-sm tracking-[0.12em] uppercase text-ink">
-                Address
+                {dict.info.addressLabel}
               </span>
               <a
                 href={site.mapsUrl}
@@ -38,7 +44,7 @@ export function InfoSection() {
             </li>
             <li>
               <span className="mb-1 block text-sm tracking-[0.12em] uppercase text-ink">
-                Phone
+                {dict.info.phoneLabel}
               </span>
               <a
                 href={site.phoneHref}
@@ -49,7 +55,7 @@ export function InfoSection() {
             </li>
             <li>
               <span className="mb-1 block text-sm tracking-[0.12em] uppercase text-ink">
-                Email
+                {dict.info.emailLabel}
               </span>
               <a
                 href={`mailto:${site.email}`}
@@ -60,7 +66,7 @@ export function InfoSection() {
             </li>
             <li>
               <span className="mb-1 block text-sm tracking-[0.12em] uppercase text-ink">
-                Social
+                {dict.info.socialLabel}
               </span>
               <span className="flex flex-wrap gap-4">
                 <a
@@ -86,7 +92,7 @@ export function InfoSection() {
 
         <div className="overflow-hidden rounded-lg border border-border bg-surface shadow-[0_20px_50px_rgba(37,34,32,0.08)]">
           <iframe
-            title="Bepo Restaurant location on Google Maps"
+            title={dict.info.mapTitle}
             src={site.mapsEmbed}
             className="h-[360px] w-full grayscale-[20%] contrast-[1.05] md:h-full md:min-h-[420px]"
             loading="lazy"

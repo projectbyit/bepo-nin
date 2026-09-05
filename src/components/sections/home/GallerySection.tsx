@@ -4,6 +4,7 @@
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Container } from "@/components/shared/Container";
+import type { Dictionary } from "@/i18n/dictionaries";
 
 const P =
   "/gallery/restaurant_konoba_bepo_nin_old_town_table_booking_reservation";
@@ -61,7 +62,9 @@ const images = [
 
 const SLIDE_MS = 360;
 
-export function GallerySection() {
+type Props = { dict: Dictionary };
+
+export function GallerySection({ dict }: Props) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [displayIndex, setDisplayIndex] = useState(0);
   const [motion, setMotion] = useState({
@@ -147,13 +150,13 @@ export function GallerySection() {
       <Container className="flex flex-col gap-10">
         <div className="flex max-w-2xl flex-col gap-4">
           <p className="font-serif text-sm tracking-[0.18em] uppercase text-gold">
-            Gallery
+            {dict.gallery.label}
           </p>
           <h2 className="font-display text-4xl uppercase leading-tight tracking-[0.06em] text-ink md:text-5xl">
-            Moments from the table and the town.
+            {dict.gallery.title}
           </h2>
           <p className="font-serif text-lg text-ink-muted">
-            Fresh plates, stone streets, and evenings shared with friends and family.
+            {dict.gallery.lead}
           </p>
         </div>
 

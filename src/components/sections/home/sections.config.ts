@@ -33,6 +33,7 @@ export const homeSections = [
     key: "faq",
     name: "FAQ",
     file: "FaqSection.tsx",
-    description: "Five SEO FAQ items with accordion answers",
+    description:
+      "SEO FAQ including seasonal hours, celebrations, and winter closure",
   },
 ] as const;

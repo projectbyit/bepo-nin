@@ -3,11 +3,27 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { Container } from "@/components/shared/Container";
-import { navLinks, site } from "@/lib/site";
+import { localePath, type Locale } from "@/i18n/config";
+import type { Dictionary } from "@/i18n/dictionaries";
+import { site } from "@/lib/site";
 
-export function SiteHeader() {
+type Props = {
+  locale: Locale;
+  dict: Dictionary;
+};
+
+export function SiteHeader({ locale, dict }: Props) {
   const [open, setOpen] = useState(false);
+  const home = localePath(locale);
+  const navLinks = [
+    { href: "#about", label: dict.nav.about },
+    { href: "#gallery", label: dict.nav.gallery },
+    { href: "#info", label: dict.nav.info },
+    { href: "#contact", label: dict.nav.contact },
+    { href: "#faq", label: dict.nav.faq },
+  ] as const;
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -29,7 +45,7 @@ export function SiteHeader() {
       <header className="sticky top-0 z-[70] border-b border-border bg-background">
         <Container className="relative flex items-center justify-between gap-4 py-3 md:py-4">
           <Link
-            href="#top"
+            href={home}
             onClick={() => setOpen(false)}
             className="group relative z-[80] inline-flex shrink-0 items-center transition-opacity duration-200 ease-out hover:opacity-80"
           >
@@ -43,21 +59,24 @@ export function SiteHeader() {
             />
           </Link>
 
-          <nav aria-label="Primary" className="hidden items-center gap-1 md:flex md:gap-2">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="rounded-sm px-2.5 py-2 font-serif text-xs tracking-[0.16em] uppercase text-ink-muted transition-colors duration-200 ease-out hover:text-ink focus-visible:text-ink md:px-3 md:text-sm"
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
+          <div className="hidden items-center gap-1 md:flex md:gap-2">
+            <nav aria-label="Primary" className="flex items-center gap-1 md:gap-2">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="rounded-sm px-2.5 py-2 font-serif text-xs tracking-[0.16em] uppercase text-ink-muted transition-colors duration-200 ease-out hover:text-ink focus-visible:text-ink md:px-3 md:text-sm"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+            <LanguageSwitcher locale={locale} label={dict.nav.languages} />
+          </div>
 
           <button
             type="button"
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? dict.nav.closeMenu : dict.nav.openMenu}
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen((value) => !value)}
@@ -99,6 +118,11 @@ export function SiteHeader() {
                 {link.label}
               </a>
             ))}
+            <LanguageSwitcher
+              locale={locale}
+              label={dict.nav.languages}
+              variant="mobile"
+            />
           </nav>
         </div>
       ) : null}

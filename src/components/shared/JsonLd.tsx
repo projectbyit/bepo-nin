@@ -1,11 +1,20 @@
-import { faqs } from "@/lib/faq";
+import type { Dictionary } from "@/i18n/dictionaries";
+import { localePath, type Locale } from "@/i18n/config";
 import { site } from "@/lib/site";
 
-export function JsonLd() {
+type Props = {
+  locale: Locale;
+  dict: Dictionary;
+};
+
+export function JsonLd({ locale, dict }: Props) {
+  const pageUrl = `https://beporestaurantnin.com${localePath(locale)}`;
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.map((item) => ({
+    inLanguage: locale,
+    mainEntity: dict.faq.items.map((item) => ({
       "@type": "Question",
       name: item.question,
       acceptedAnswer: {
@@ -18,14 +27,16 @@ export function JsonLd() {
   const restaurantSchema = {
     "@context": "https://schema.org",
     "@type": "Restaurant",
+    "@id": `${pageUrl}#restaurant`,
     name: site.name,
-    description: site.description,
-    url: site.website,
+    description: dict.meta.description,
+    url: pageUrl,
     telephone: site.phone,
     email: site.email,
     image: "https://beporestaurantnin.com/logo-bepo.png",
     servesCuisine: ["Dalmatian", "Croatian", "Mediterranean", "Seafood"],
     priceRange: "$$",
+    inLanguage: locale,
     address: {
       "@type": "PostalAddress",
       streetAddress: "Ul. Hrvatskog Sabora 1",
@@ -51,6 +62,8 @@ export function JsonLd() {
       ],
       opens: "13:00",
       closes: "22:00",
+      validFrom: "2026-04-01",
+      validThrough: "2026-10-31",
     },
     sameAs: [site.facebook, site.instagram],
   };
