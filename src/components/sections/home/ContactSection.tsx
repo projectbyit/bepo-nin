@@ -26,7 +26,7 @@ export function ContactSection() {
         <div className="pt-2">
           <a
             href={`mailto:${site.email}?subject=${encodeURIComponent("Table booking — Bepo Nin")}`}
-            className="inline-flex items-center justify-center rounded-md bg-ink px-8 py-3.5 font-serif text-base tracking-[0.06em] uppercase text-gold transition-colors duration-200 ease-out hover:bg-ink/90 hover:text-gold-hover active:translate-y-px"
+            className="btn-booking"
           >
             Booking Table
           </a>
