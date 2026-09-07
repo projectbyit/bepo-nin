@@ -46,7 +46,8 @@ export type Dictionary = {
     label: string;
     title: string;
     hoursLabel: string;
-    hoursValue: string;
+    hoursSeason: string;
+    hoursDays: { day: string; hours: string }[];
     winterNote: string;
     addressLabel: string;
     phoneLabel: string;
@@ -83,7 +84,7 @@ const en: Dictionary = {
     title:
       "Bepo Restaurant Konoba Nin | Dalmatian Cuisine in Old Town Nin, Croatia",
     description:
-      "Bepo Restaurant Konoba Nin — Dalmatian starters, grill, meat, fish, pasta and desserts in Old Town Nin. Open in season daily 13:00–22:00. Closed in winter (November–March). Reserve a table, or enquire about celebrations, first communions and confirmations.",
+      "Bepo Restaurant Konoba Nin — Dalmatian starters, grill, meat, fish, pasta and desserts in Old Town Nin. In season: Mon–Thu 17:00–22:00, Fri–Sun 14:00–22:00. Closed in winter (November–March). Reserve a table, or enquire about celebrations, first communions and confirmations.",
     keywords: [
       "Bepo Restaurant Nin",
       "Konoba Bepo Nin",
@@ -95,7 +96,7 @@ const en: Dictionary = {
       "first communion Nin restaurant",
     ],
     ogDescription:
-      "The story continues in Nin. Grill, meat, fish, pasta and warm company in Old Town Nin. Open in season 13:00–22:00. Closed November–March.",
+      "The story continues in Nin. Grill, meat, fish, pasta and warm company in Old Town Nin. In season: Mon–Thu 17:00–22:00, Fri–Sun 14:00–22:00. Closed November–March.",
   },
   nav: {
     about: "About",
@@ -131,7 +132,16 @@ const en: Dictionary = {
     label: "Info / Contact",
     title: "Find us by the Roman bridge.",
     hoursLabel: "Opening hours",
-    hoursValue: "In season: every day 13:00 – 22:00 (April–October)",
+    hoursSeason: "In season (April–October)",
+    hoursDays: [
+      { day: "Monday", hours: "17:00–22:00" },
+      { day: "Tuesday", hours: "17:00–22:00" },
+      { day: "Wednesday", hours: "17:00–22:00" },
+      { day: "Thursday", hours: "17:00–22:00" },
+      { day: "Friday", hours: "14:00–22:00" },
+      { day: "Saturday", hours: "14:00–22:00" },
+      { day: "Sunday", hours: "14:00–22:00" },
+    ],
     winterNote: "Closed in winter: November–March",
     addressLabel: "Address",
     phoneLabel: "Phone",
@@ -161,7 +171,7 @@ const en: Dictionary = {
       {
         question: "What are the opening hours? Are you open in winter?",
         answer:
-          "In season (April–October) we are open every day from 13:00 to 22:00. We are closed in winter from November to March.",
+          "In season (April–October) we are open Monday–Thursday 17:00–22:00 and Friday–Sunday 14:00–22:00. We are closed in winter from November to March.",
       },
       {
         question: "How do I reserve a table at Bepo in Nin?",
@@ -202,7 +212,7 @@ const hr: Dictionary = {
     title:
       "Restoran Konoba Bepo Nin | Dalmatinska kuhinja u starom gradu Ninu",
     description:
-      "Restoran Konoba Bepo Nin — dalmatinska predjela, grill, meso, riba, pašta i deserti u starom gradu Ninu. U sezoni radimo svaki dan 13:00–22:00. Zimi ne radimo (studeni–ožujak). Rezervirajte stol ili se raspitajte za domjenke, pričesti i krizme.",
+      "Restoran Konoba Bepo Nin — dalmatinska predjela, grill, meso, riba, pašta i deserti u starom gradu Ninu. U sezoni: pon–čet 17:00–22:00, pet–ned 14:00–22:00. Zimi ne radimo (studeni–ožujak). Rezervirajte stol ili se raspitajte za domjenke, pričesti i krizme.",
     keywords: [
       "Restoran Bepo Nin",
       "Konoba Bepo Nin",
@@ -214,7 +224,7 @@ const hr: Dictionary = {
       "pričest krizma Nin",
     ],
     ogDescription:
-      "Priča se nastavlja u Ninu. Grill, meso, riba, pašta i toplina domaćeg stola u starom gradu Ninu. U sezoni 13:00–22:00. Zimi zatvoreno (studeni–ožujak).",
+      "Priča se nastavlja u Ninu. Grill, meso, riba, pašta i toplina domaćeg stola u starom gradu Ninu. U sezoni: pon–čet 17:00–22:00, pet–ned 14:00–22:00. Zimi zatvoreno (studeni–ožujak).",
   },
   nav: {
     about: "O nama",
@@ -250,7 +260,16 @@ const hr: Dictionary = {
     label: "Info / Kontakt",
     title: "Nađite nas kod Rimskog mosta.",
     hoursLabel: "Radno vrijeme",
-    hoursValue: "U sezoni: svaki dan 13:00 – 22:00 (travanj–listopad)",
+    hoursSeason: "U sezoni (travanj–listopad)",
+    hoursDays: [
+      { day: "Ponedjeljak", hours: "17:00–22:00" },
+      { day: "Utorak", hours: "17:00–22:00" },
+      { day: "Srijeda", hours: "17:00–22:00" },
+      { day: "Četvrtak", hours: "17:00–22:00" },
+      { day: "Petak", hours: "14:00–22:00" },
+      { day: "Subota", hours: "14:00–22:00" },
+      { day: "Nedjelja", hours: "14:00–22:00" },
+    ],
     winterNote: "Zimi ne radimo: studeni–ožujak",
     addressLabel: "Adresa",
     phoneLabel: "Telefon",
@@ -280,7 +299,7 @@ const hr: Dictionary = {
       {
         question: "Koje je radno vrijeme? Radite li zimi?",
         answer:
-          "U sezoni (travanj–listopad) radimo svaki dan od 13:00 do 22:00. Zimi ne radimo — od studenoga do ožujka smo zatvoreni.",
+          "U sezoni (travanj–listopad) radimo ponedjeljak–četvrtak 17:00–22:00, a petak–nedjelja 14:00–22:00. Zimi ne radimo — od studenoga do ožujka smo zatvoreni.",
       },
       {
         question: "Kako rezervirati stol u Bepu u Ninu?",
@@ -320,7 +339,7 @@ const de: Dictionary = {
     title:
       "Restaurant Konoba Bepo Nin | Dalmatinische Küche in der Altstadt von Nin",
     description:
-      "Restaurant Konoba Bepo Nin — dalmatinische Vorspeisen, Grill, Fleisch, Fisch, Pasta und Desserts in der Altstadt von Nin. In der Saison täglich 13:00–22:00 geöffnet. Im Winter geschlossen (November–März). Reservieren Sie einen Tisch oder fragen Sie nach Feiern, Erstkommunionen und Firmungen.",
+      "Restaurant Konoba Bepo Nin — dalmatinische Vorspeisen, Grill, Fleisch, Fisch, Pasta und Desserts in der Altstadt von Nin. In der Saison: Mo–Do 17:00–22:00, Fr–So 14:00–22:00. Im Winter geschlossen (November–März). Reservieren Sie einen Tisch oder fragen Sie nach Feiern, Erstkommunionen und Firmungen.",
     keywords: [
       "Restaurant Bepo Nin",
       "Konoba Bepo Nin",
@@ -332,7 +351,7 @@ const de: Dictionary = {
       "Erstkommunion Firmung Nin",
     ],
     ogDescription:
-      "Die Geschichte geht in Nin weiter. Grill, Fleisch, Fisch, Pasta und herzliche Gastfreundschaft in der Altstadt von Nin. In der Saison 13:00–22:00. Geschlossen November–März.",
+      "Die Geschichte geht in Nin weiter. Grill, Fleisch, Fisch, Pasta und herzliche Gastfreundschaft in der Altstadt von Nin. In der Saison: Mo–Do 17:00–22:00, Fr–So 14:00–22:00. Geschlossen November–März.",
   },
   nav: {
     about: "Über uns",
@@ -368,7 +387,16 @@ const de: Dictionary = {
     label: "Info / Kontakt",
     title: "Finden Sie uns an der Römerbrücke.",
     hoursLabel: "Öffnungszeiten",
-    hoursValue: "In der Saison: täglich 13:00 – 22:00 (April–Oktober)",
+    hoursSeason: "In der Saison (April–Oktober)",
+    hoursDays: [
+      { day: "Montag", hours: "17:00–22:00" },
+      { day: "Dienstag", hours: "17:00–22:00" },
+      { day: "Mittwoch", hours: "17:00–22:00" },
+      { day: "Donnerstag", hours: "17:00–22:00" },
+      { day: "Freitag", hours: "14:00–22:00" },
+      { day: "Samstag", hours: "14:00–22:00" },
+      { day: "Sonntag", hours: "14:00–22:00" },
+    ],
     winterNote: "Im Winter geschlossen: November–März",
     addressLabel: "Adresse",
     phoneLabel: "Telefon",
@@ -398,7 +426,7 @@ const de: Dictionary = {
       {
         question: "Welche Öffnungszeiten gelten? Habt ihr im Winter geöffnet?",
         answer:
-          "In der Saison (April–Oktober) sind wir täglich von 13:00 bis 22:00 geöffnet. Im Winter haben wir geschlossen — von November bis März.",
+          "In der Saison (April–Oktober) sind wir Montag–Donnerstag von 17:00–22:00 und Freitag–Sonntag von 14:00–22:00 geöffnet. Im Winter haben wir geschlossen — von November bis März.",
       },
       {
         question: "Wie reserviere ich einen Tisch bei Bepo in Nin?",

@@ -24,8 +24,23 @@ export function InfoSection({ dict }: Props) {
               <span className="mb-1 block text-sm tracking-[0.12em] uppercase text-ink">
                 {dict.info.hoursLabel}
               </span>
-              <span className="block">{dict.info.hoursValue}</span>
-              <span className="mt-1 block text-base text-ink/70">
+              <span className="mb-2 block text-base text-ink/70">
+                {dict.info.hoursSeason}
+              </span>
+              <ul className="max-w-xs space-y-1">
+                {dict.info.hoursDays.map((entry) => (
+                  <li
+                    key={entry.day}
+                    className="flex items-baseline justify-between gap-6"
+                  >
+                    <span>{entry.day}</span>
+                    <span className="shrink-0 tabular-nums text-ink">
+                      {entry.hours}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <span className="mt-2 block text-base text-ink/70">
                 {dict.info.winterNote}
               </span>
             </li>
