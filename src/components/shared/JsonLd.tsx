@@ -52,22 +52,24 @@ export function JsonLd({ locale, dict }: Props) {
       latitude: 44.2435,
       longitude: 15.1831,
     },
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday",
-      ],
-      opens: "13:00",
-      closes: "22:00",
-      validFrom: "2026-04-01",
-      validThrough: "2026-10-31",
-    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        opens: "17:00",
+        closes: "22:00",
+        validFrom: "2026-04-01",
+        validThrough: "2026-10-31",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Friday", "Saturday", "Sunday"],
+        opens: "14:00",
+        closes: "22:00",
+        validFrom: "2026-04-01",
+        validThrough: "2026-10-31",
+      },
+    ],
     sameAs: [site.facebook, site.instagram],
   };
 
