@@ -18,6 +18,17 @@ export function InfoSection({ dict }: Props) {
           </h2>
         </div>
 
+        <div className="overflow-hidden rounded-lg border border-border bg-surface shadow-[0_20px_50px_rgba(37,34,32,0.08)]">
+          <iframe
+            title={dict.info.mapTitle}
+            src={site.mapsEmbed}
+            className="h-[360px] w-full grayscale-[20%] contrast-[1.05] md:h-[480px]"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+        </div>
+
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
           <div className="flex flex-col gap-5">
             <h3 className="font-display text-2xl uppercase tracking-[0.08em] text-ink md:text-3xl">
@@ -98,22 +109,6 @@ export function InfoSection({ dict }: Props) {
                 </span>
               </li>
             </ul>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-5">
-          <h3 className="font-display text-2xl uppercase tracking-[0.08em] text-ink md:text-3xl">
-            {dict.info.mapHeading}
-          </h3>
-          <div className="overflow-hidden rounded-lg border border-border bg-surface shadow-[0_20px_50px_rgba(37,34,32,0.08)]">
-            <iframe
-              title={dict.info.mapTitle}
-              src={site.mapsEmbed}
-              className="h-[360px] w-full grayscale-[20%] contrast-[1.05] md:h-[480px]"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
-            />
           </div>
         </div>
       </Container>
