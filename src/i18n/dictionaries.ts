@@ -49,10 +49,12 @@ export type Dictionary = {
     hoursSeason: string;
     hoursLines: string[];
     winterNote: string;
+    contactHeading: string;
     addressLabel: string;
     phoneLabel: string;
     emailLabel: string;
     socialLabel: string;
+    mapHeading: string;
     mapTitle: string;
   };
   contact: {
@@ -143,10 +145,12 @@ const en: Dictionary = {
       "Sunday: 14:00 – 22:00",
     ],
     winterNote: "Closed in winter: November–March",
+    contactHeading: "Contact",
     addressLabel: "Address",
     phoneLabel: "Phone",
     emailLabel: "Email",
     socialLabel: "Social",
+    mapHeading: "Location",
     mapTitle: "Bepo Restaurant location on Google Maps",
   },
   contact: {
@@ -271,10 +275,12 @@ const hr: Dictionary = {
       "Nedjelja: 14:00 – 22:00",
     ],
     winterNote: "Zimi ne radimo: studeni–ožujak",
+    contactHeading: "Kontakt",
     addressLabel: "Adresa",
     phoneLabel: "Telefon",
     emailLabel: "Email",
     socialLabel: "Društvene mreže",
+    mapHeading: "Lokacija",
     mapTitle: "Lokacija restorana Bepo na Google kartama",
   },
   contact: {
@@ -398,10 +404,12 @@ const de: Dictionary = {
       "Sonntag: 14:00 – 22:00",
     ],
     winterNote: "Im Winter geschlossen: November–März",
+    contactHeading: "Kontakt",
     addressLabel: "Adresse",
     phoneLabel: "Telefon",
     emailLabel: "E-Mail",
     socialLabel: "Social Media",
+    mapHeading: "Standort",
     mapTitle: "Standort von Restaurant Bepo auf Google Maps",
   },
   contact: {
