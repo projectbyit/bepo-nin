@@ -73,6 +73,8 @@ export type Dictionary = {
   };
   footer: {
     location: string;
+    tagline: string;
+    contact: string;
     follow: string;
     partners: string;
     partnerDescription: string;
@@ -202,6 +204,9 @@ const en: Dictionary = {
   },
   footer: {
     location: "Old Town Nin",
+    tagline:
+      "Nurturing Dalmatian hospitality and flavour for more than 25 years.",
+    contact: "Contact",
     follow: "Follow",
     partners: "Partners",
     partnerDescription:
@@ -331,6 +336,9 @@ const hr: Dictionary = {
   },
   footer: {
     location: "Stari grad Nin",
+    tagline:
+      "Njegujemo gostoljubivost i okus Dalmacije više od 25 godina.",
+    contact: "Kontakt",
     follow: "Pratite nas",
     partners: "Partneri",
     partnerDescription:
@@ -462,6 +470,9 @@ const de: Dictionary = {
   },
   footer: {
     location: "Altstadt Nin",
+    tagline:
+      "Wir pflegen dalmatinische Gastfreundschaft und Geschmack seit mehr als 25 Jahren.",
+    contact: "Kontakt",
     follow: "Folgen",
     partners: "Partner",
     partnerDescription:
