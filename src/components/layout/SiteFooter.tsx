@@ -14,8 +14,8 @@ export function SiteFooter({ locale, dict }: Props) {
   return (
     <footer className="w-full border-t border-border bg-ink text-surface">
       <Container className="flex flex-col gap-10 py-16 md:gap-12 md:py-20 lg:py-24">
-        <div className="grid gap-10 md:grid-cols-3 md:gap-8">
-          <div className="flex flex-col gap-4">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+          <div className="flex flex-col gap-4 sm:col-span-2 lg:col-span-1">
             <Link
               href={localePath(locale)}
               className="inline-flex w-fit transition-opacity duration-200 ease-out hover:opacity-80"
@@ -28,9 +28,40 @@ export function SiteFooter({ locale, dict }: Props) {
                 className="h-12 w-auto object-contain brightness-0 invert md:h-14"
               />
             </Link>
-            <p className="font-serif text-lg leading-relaxed text-surface/85 md:text-xl">
+            <p className="max-w-sm font-serif text-base leading-relaxed text-surface/85 md:text-lg">
+              {dict.footer.tagline}
+            </p>
+            <p className="font-serif text-sm tracking-[0.08em] text-surface/65 md:text-base">
               {dict.footer.location}
             </p>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <p className="font-serif text-xs tracking-[0.18em] uppercase text-gold">
+              {dict.footer.contact}
+            </p>
+            <div className="flex flex-col gap-2 font-serif text-base text-surface/85 md:text-lg">
+              <a
+                href={site.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="max-w-xs transition-colors duration-200 ease-out hover:text-gold"
+              >
+                {site.address}
+              </a>
+              <a
+                href={site.phoneHref}
+                className="transition-colors duration-200 ease-out hover:text-gold"
+              >
+                {site.phone}
+              </a>
+              <a
+                href={`mailto:${site.email}`}
+                className="transition-colors duration-200 ease-out hover:text-gold"
+              >
+                {site.email}
+              </a>
+            </div>
           </div>
 
           <div className="flex flex-col gap-3">
