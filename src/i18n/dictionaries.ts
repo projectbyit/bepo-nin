@@ -121,8 +121,8 @@ const en: Dictionary = {
   about: {
     label: "About",
     title: "Welcome to the heart of Old Town Nin.",
-    p1: "Welcome to Bepo restaurant and konoba in the heart of Old Town Nin, on the quiet shores of the Nin lagoon. Traditional Dalmatian cooking meets the warmth of a home table — starters, grill, meat, fish, pasta and desserts, with local wine, olive oil from this region, and olives from our terrace.",
-    p2: "Bepo is more than a meal — it is the experience of Nin: sea, salt, stone, and generations who lived from this land and water. Use the weekend for a stroll through town, then finish with a plate at our table.",
+    p1: "Bepo Restaurant has nurtured tradition since 2000. We began in the Zaton Tourist Resort, and after 25 years we chose to take a step forward — raising the bar in our offering, ambiance, and quality, here in the heart of Old Town Nin.",
+    p2: "Traditional Dalmatian cooking meets the warmth of a home table — starters, grill, meat, fish, pasta and desserts, with local wine, olive oil from this region, and olives from our terrace. Bepo is more than a meal — it is the experience of Nin: sea, salt, stone, and generations who lived from this land and water.",
     imageAlt: "Atmosphere at Bepo Restaurant Konoba Nin",
   },
   gallery: {
@@ -251,8 +251,8 @@ const hr: Dictionary = {
   about: {
     label: "O nama",
     title: "Dobrodošli u srce starog grada Nina.",
-    p1: "Dobrodošli u restoran i konobu Bepo u srcu starog grada Nina, uz mirne obale Ninske lagune. Tradicionalna dalmatinska kuhinja susreće toplinu domaćeg stola — predjela, grill, meso, riba, pašta i deserti, uz lokalno vino, maslinovo ulje ovog kraja i masline s naše terase.",
-    p2: "Bepo je više od obroka — doživljaj Nina: more, sol, kamen i naraštaji koji su živjeli od ovog kraja i mora. Iskoristite vikend za šetnju gradom, pa završite tanjurom za našim stolom.",
+    p1: "Restoran Bepo njeguje tradiciju od 2000. godine. Počeli smo u Turističkom naselju Zaton, a nakon 25 godina odlučili smo napraviti iskorak — podići ljestvicu u ponudi, ambientu i kvaliteti, ovdje u srcu starog grada Nina.",
+    p2: "Tradicionalna dalmatinska kuhinja susreće toplinu domaćeg stola — predjela, grill, meso, riba, pašta i deserti, uz lokalno vino, maslinovo ulje ovog kraja i masline s naše terase. Bepo je više od obroka — doživljaj Nina: more, sol, kamen i naraštaji koji su živjeli od ovog kraja i mora.",
     imageAlt: "Ambijent restorana Konoba Bepo Nin",
   },
   gallery: {
@@ -380,8 +380,8 @@ const de: Dictionary = {
   about: {
     label: "Über uns",
     title: "Willkommen im Herzen der Altstadt von Nin.",
-    p1: "Willkommen im Restaurant und in der Konoba Bepo im Herzen der Altstadt von Nin, an den ruhigen Ufern der Lagune von Nin. Traditionelle dalmatinische Küche trifft auf die Wärme eines heimischen Tisches — Vorspeisen, Grillgerichte, Fleisch, Fisch, Pasta und Desserts, dazu lokaler Wein, Olivenöl aus dieser Region und Oliven von unserer Terrasse.",
-    p2: "Bepo ist mehr als eine Mahlzeit — das Erlebnis von Nin: Meer, Salz, Stein und Generationen, die von diesem Land und Wasser lebten. Nutzen Sie das Wochenende für einen Spaziergang durch die Stadt und beenden Sie den Tag an unserem Tisch.",
+    p1: "Das Restaurant Bepo pflegt Tradition seit dem Jahr 2000. Wir begannen in der Touristensiedlung Zaton und beschlossen nach 25 Jahren, einen Schritt weiterzugehen — das Niveau von Angebot, Ambiente und Qualität hier im Herzen der Altstadt von Nin zu heben.",
+    p2: "Traditionelle dalmatinische Küche trifft auf die Wärme eines heimischen Tisches — Vorspeisen, Grillgerichte, Fleisch, Fisch, Pasta und Desserts, dazu lokaler Wein, Olivenöl aus dieser Region und Oliven von unserer Terrasse. Bepo ist mehr als eine Mahlzeit — das Erlebnis von Nin: Meer, Salz, Stein und Generationen, die von diesem Land und Wasser lebten.",
     imageAlt: "Ambiente im Restaurant Konoba Bepo Nin",
   },
   gallery: {
