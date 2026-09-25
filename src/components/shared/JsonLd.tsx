@@ -59,7 +59,7 @@ export function JsonLd({ locale, dict }: Props) {
         opens: "17:00",
         closes: "22:00",
         validFrom: "2026-04-01",
-        validThrough: "2026-10-31",
+        validThrough: "2026-09-25",
       },
       {
         "@type": "OpeningHoursSpecification",
@@ -67,7 +67,7 @@ export function JsonLd({ locale, dict }: Props) {
         opens: "14:00",
         closes: "22:00",
         validFrom: "2026-04-01",
-        validThrough: "2026-10-31",
+        validThrough: "2026-09-25",
       },
     ],
     sameAs: [site.facebook, site.instagram],

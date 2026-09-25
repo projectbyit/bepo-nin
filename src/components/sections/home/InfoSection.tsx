@@ -35,13 +35,11 @@ export function InfoSection({ dict }: Props) {
               {dict.info.hoursLabel}
             </h3>
             <div className="font-serif text-lg text-ink-muted">
-              <p className="mb-2 text-base text-ink/70">{dict.info.hoursSeason}</p>
-              <ul className="flex flex-col gap-1">
-                {dict.info.hoursLines.map((line) => (
-                  <li key={line}>{line}</li>
-                ))}
-              </ul>
-              <p className="mt-2 text-base text-ink/70">{dict.info.winterNote}</p>
+              {dict.info.hoursNotice.map((line) => (
+                <p key={line} className="leading-relaxed">
+                  {line}
+                </p>
+              ))}
             </div>
           </div>
 
