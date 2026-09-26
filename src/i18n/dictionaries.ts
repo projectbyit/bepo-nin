@@ -112,7 +112,7 @@ const en: Dictionary = {
   },
   hero: {
     title: "Restaurant Konoba BEPO Nin",
-    slogan: "The story continues in Nin.",
+    slogan: "We've closed the 2026 season. Thank you — see you in 2027.",
     lead: "Starters, grill, meat, fish, pasta and desserts — with local wine and warm company in Old Town Nin.",
     ctaReserve: "Reserve a table",
     ctaGallery: "View gallery",
@@ -238,7 +238,7 @@ const hr: Dictionary = {
   },
   hero: {
     title: "Restoran Konoba BEPO Nin",
-    slogan: "Priča se nastavlja u Ninu.",
+    slogan: "Završili smo sezonu 2026. Hvala vam — vidimo se 2027.",
     lead: "Predjela, grill, meso, riba, pašta i deserti — uz lokalno vino i toplinu društva u srcu starog grada Nina.",
     ctaReserve: "Rezervirajte stol",
     ctaGallery: "Pogledajte galeriju",
@@ -363,7 +363,7 @@ const de: Dictionary = {
   },
   hero: {
     title: "Restaurant Konoba BEPO Nin",
-    slogan: "Die Geschichte geht in Nin weiter.",
+    slogan: "Die Saison 2026 ist beendet. Danke — wir sehen uns 2027.",
     lead: "Vorspeisen, Grill, Fleisch, Fisch, Pasta und Desserts — mit lokalem Wein und herzlicher Gesellschaft in der Altstadt von Nin.",
     ctaReserve: "Tisch reservieren",
     ctaGallery: "Galerie ansehen",
